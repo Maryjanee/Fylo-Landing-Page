@@ -1,0 +1,64 @@
+:root {
+  --VeryDarkBlue: hsl(243, 87%, 12%);
+  --DesaturatedBlue: hsl(238, 22%, 44%);
+  --BrightBlue: hsl(224, 93%, 58%);
+  --ModerateCyan: hsl(170, 45%, 43%);
+  --LightGrayishBlue: hsl(240, 75%, 98%);
+  --LightGray: hsl(0, 0%, 75%);
+  --regularFontSize: 400;
+  --boldFontSize: 700;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1366px;
+  max-width: 90%;
+}
+
+.flex-container {
+  display: flex;
+  align-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+nav {
+  padding: 1rem 0;
+}
+
+.logo-container {
+  width: 6rem;
+}
+.nav-links li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.nav-links li a {
+  font-size: 0.9rem;
+  color: var(--VeryDarkBlue);
+}
+
+@media only screen and (min-width: 376px) {
+}
