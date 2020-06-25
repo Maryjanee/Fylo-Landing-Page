@@ -1,4 +1,5 @@
 :root {
+  --white: #fff;
   --VeryDarkBlue: hsl(243, 87%, 12%);
   --DesaturatedBlue: hsl(238, 22%, 44%);
   --BrightBlue: hsl(224, 93%, 58%);
@@ -18,6 +19,10 @@
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  line-height: 1.5;
+}
+
 li {
   list-style: none;
 }
@@ -26,8 +31,30 @@ a {
   text-decoration: none;
 }
 
-img {
+input {
+  padding: 0.8rem 1rem;
+  font-weight: var(--boldFontSize);
+  font-size: 1rem;
+}
+input[type="text"] {
+  font-weight: var(--regularFontSize);
+}
+
+img,
+input {
   width: 100%;
+  height: 100%;
+}
+
+.get-started {
+  background: var(--BrightBlue);
+  color: var(--white);
+  border: 0;
+  margin: 0.6rem 0;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .wrapper {
@@ -43,6 +70,17 @@ img {
 
 .space-between {
   justify-content: space-between;
+}
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
 }
 
 nav {
@@ -60,5 +98,74 @@ nav {
   color: var(--VeryDarkBlue);
 }
 
-@media only screen and (min-width: 376px) {
+.hero-text p {
+  width: 80%;
+  padding: 1.5rem 0;
+}
+
+header {
+  padding: 2rem 0;
+  flex-direction: column;
+}
+
+form {
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  nav {
+    padding: 2rem 0 0 0;
+  }
+  .wrapper {
+  }
+
+  .logo-container {
+    width: 9rem;
+  }
+
+  .nav-links li:not(:last-child) {
+    margin: 0 5rem 0 0;
+  }
+
+  header {
+    flex-direction: row;
+
+    border: 1px solid green;
+  }
+
+  .illustration-container {
+    width: 48%;
+    order: 1;
+    margin-left: 5rem;
+  }
+
+  .hero-text {
+    width: 48%;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 2.3rem;
+    width: 100%;
+  }
+
+  .hero-text p {
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header-email {
+    width: 65%;
+  }
+
+  .get-started {
+    width: 35%;
+    padding: 0.9rem 2rem;
+    margin: 0 1rem;
+  }
 }
