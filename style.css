@@ -30,3 +30,52 @@ li {
 a {
   text-decoration: none;
 }
+
+input,
+button {
+  border-radius: 0.3rem;
+}
+
+img {
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  width: 8rem;
+}
+
+.nav-links {
+  flex: 0.7;
+}
+
+.nav-links a {
+  color: var(--VeryDarkBlue);
+}
+
+nav {
+  padding: 1.5rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-links {
+    flex: 0.3;
+  }
+}
