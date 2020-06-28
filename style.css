@@ -29,7 +29,23 @@ li {
 
 a {
   text-decoration: none;
+  display: block;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
 button {
   padding: 0.7rem 0;
   font-weight: 700;
@@ -38,6 +54,7 @@ button {
   color: var(--white);
   background: var(--BrightBlue);
 }
+
 input {
   padding: 0.7rem 1rem;
 }
@@ -62,6 +79,10 @@ img {
 
 .space-between {
   justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
 }
 
 .grid-container {
@@ -116,18 +137,95 @@ form {
   flex-direction: column;
 }
 
+#features {
+  margin: 5rem 0;
+  grid-template-columns: 1fr;
+  row-gap: 4rem;
+}
+
+.section-heading {
+  font-size: 1.4rem;
+}
+
+#features p {
+  color: var(--DesaturatedBlue);
+}
+
+.arrow-container {
+  text-align: center;
+  width: 45%;
+  margin: 0rem auto;
+  border-bottom: 1.5px solid var(--ModerateCyan);
+}
+
+.arrow-text {
+  font-size: 1rem;
+}
+
+.arrow {
+  width: 1.5rem;
+  align-self: flex-start;
+  margin-left: 0.5rem;
+}
+
+.testimonial {
+  width: 90%;
+  border: 1px solid green;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.quotes-container {
+  width: 1rem;
+}
+
+.avatar-container {
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+
+.avatar-container img {
+  border-radius: 50%;
+}
+
+.author-name p:first-child {
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: var(--VeryDarkBlue);
+  font-size: 1rem;
+}
+
+.author-name p:last-child {
+  margin: 0rem;
+  font-size: 0.8rem;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-links {
     flex: 0.3;
   }
 
-  header {
+  header,
+  #features {
     display: grid;
     padding: 2rem 0;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 4rem;
     align-items: center;
   }
+
+  #features {
+    margin: 15rem 0;
+  }
+  #features p {
+    color: var(--DesaturatedBlue);
+  }
+
+  .section-heading {
+    font-size: 2.3rem;
+    text-align: left;
+  }
+
   .illustration-container {
     order: 1;
     width: 100%;
@@ -171,5 +269,18 @@ form {
   input,
   button {
     padding: 1rem 0;
+  }
+
+  .arrow-container {
+    margin: 0;
+  }
+
+  .testimonial {
+    margin: 2rem 0 2rem 0;
+    width: 58%;
+  }
+
+  .testimonial > p {
+    font-size: 0.9rem;
   }
 }
