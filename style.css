@@ -43,7 +43,7 @@ p {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 button {
@@ -75,6 +75,10 @@ img {
 
 .flex-container {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .space-between {
@@ -175,7 +179,8 @@ form {
   padding: 1.5rem;
 }
 
-.quotes-container {
+.quotes-container,
+a > img {
   width: 1rem;
 }
 
@@ -200,13 +205,38 @@ form {
   font-size: 0.8rem;
 }
 
+#access {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer {
+  background: var(--VeryDarkBlue);
+  padding: 3rem;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 0.5rem;
+}
+
+footer * {
+  color: var(--white);
+}
+
+.social-links i {
+  border: 1px solid var(--white);
+  padding: 0.4rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-links {
     flex: 0.3;
   }
 
   header,
-  #features {
+  #features,
+  #access {
     display: grid;
     padding: 2rem 0;
     grid-template-columns: repeat(2, 1fr);
@@ -282,5 +312,59 @@ form {
 
   .testimonial > p {
     font-size: 0.9rem;
+  }
+
+  #access {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  #access * {
+    text-align: left;
+  }
+
+  #access p {
+    font-size: 0.9rem;
+  }
+
+  #access > div {
+    width: 80%;
+  }
+
+  .bottom-form {
+    width: 90%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .bottom-form input,
+  .bottom-form button {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .bottom-form button {
+    width: 50%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    row-gap: 2rem;
+    padding: 4rem;
+  }
+
+  .footer-logo {
+    grid-column: 1 / -1;
+  }
+
+  .social-links {
+    flex-direction: row;
+  }
+
+  .social-links i {
+    margin-right: 1rem;
   }
 }
